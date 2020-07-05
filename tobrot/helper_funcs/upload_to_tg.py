@@ -89,7 +89,7 @@ async def upload_to_tg(
             i_m_s_g = await message.reply_text(
                 "Telegram does not support uploading this file.\n"
                 f"Detected File Size: {d_f_s} \n"
-                "\ntrying to split the files"
+                "\ntrying to 🔓 split the files"
             )
             splitted_dir = await split_large_files(local_file_name)
             totlaa_sleif = os.listdir(splitted_dir)
@@ -100,7 +100,7 @@ async def upload_to_tg(
             await i_m_s_g.edit_text(
                 f"Detected File Size: {d_f_s} \n"
                 f"<code>{ba_se_file_name}</code> splitted into {number_of_files} files.\n"
-                "trying to upload to Telegram, now ..."
+                "trying to 📤 upload to Telegram, now ..."
             )
             for le_file in totlaa_sleif:
                 # recursion: will this FAIL somewhere?
@@ -126,7 +126,7 @@ async def upload_to_tg(
 
 async def upload_to_gdrive(file_upload, message, messa_ge, g_id):
     await asyncio.sleep(5)
-    await message.edit_text("Uploading...")
+    await message.edit_text("🔊  Uploading to ☁️ Cloud")
     start_time = int(round(time.time() * 1))
     subprocess.Popen(('touch', 'rclone.conf'), stdout = subprocess.PIPE)
     with open('rclone.conf', 'a', newline="\n") as fole:
@@ -155,7 +155,7 @@ async def upload_to_gdrive(file_upload, message, messa_ge, g_id):
         #s_tr = '-'*40
         end_time = int(round(time.time() * 1))
         m_s = (end_time - start_time)
-        await message.edit_text(f"""**Uploaded Sucessfully** __in {m_s}seconds__ \n\n<a href="{tam_link}">📄 {file_upload}</a>""")
+        await message.edit_text(f"""**💎 Uploaded Sucessfully** __in {m_s}seconds__ \n\n<a href="{tam_link}">📄 {file_upload}</a>""")
         os.remove(file_upload)
     else:
         tt= os.path.join(destination, file_upload)
@@ -182,7 +182,7 @@ async def upload_to_gdrive(file_upload, message, messa_ge, g_id):
         #s_tr = '-'*40
         end_time = int(round(time.time() * 1))
         m_s = (end_time - start_time)
-        await message.edit_text(f"""**Uploaded Sucessfully** __in {m_s}seconds__ \n\n<a href="{tam_link}">📁 {file_upload}</a>""")
+        await message.edit_text(f"""**💎 Uploaded Sucessfully** __in {m_s}seconds__ \n\n<a href="{tam_link}">📁 {file_upload}</a>""")
 
 #
 
@@ -202,9 +202,9 @@ async def upload_single_file(message, local_file_name, caption_str, from_user, e
         message_for_progress_display = message
         if not edit_media:
             message_for_progress_display = await message.reply_text(
-                "starting upload of {}".format(os.path.basename(local_file_name))
+                "starting 📤 upload of {}".format(os.path.basename(local_file_name))
             )
-        if local_file_name.upper().endswith(("MKV", "MP4", "WEBM")):
+        if local_file_name.upper().endswith(("MKV", "MP4", "AVI" ,"WEBM")):
             metadata = extractMetadata(createParser(local_file_name))
             duration = 0
             if metadata.has("duration"):
@@ -276,7 +276,7 @@ async def upload_single_file(message, local_file_name, caption_str, from_user, e
                     reply_to_message_id=message.reply_to_message.message_id,
                     progress=progress_for_pyrogram,
                     progress_args=(
-                        "trying to upload",
+                        "trying to 📤 upload",
                         message_for_progress_display,
                         start_time
                     )
@@ -331,7 +331,7 @@ async def upload_single_file(message, local_file_name, caption_str, from_user, e
                     reply_to_message_id=message.reply_to_message.message_id,
                     progress=progress_for_pyrogram,
                     progress_args=(
-                        "trying to upload",
+                        "trying to 📤 upload",
                         message_for_progress_display,
                         start_time
                     )
@@ -373,7 +373,7 @@ async def upload_single_file(message, local_file_name, caption_str, from_user, e
                     reply_to_message_id=message.reply_to_message.message_id,
                     progress=progress_for_pyrogram,
                     progress_args=(
-                        "trying to upload",
+                        "trying to 📤 upload",
                         message_for_progress_display,
                         start_time
                     )
