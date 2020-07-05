@@ -34,7 +34,7 @@ async def new_join_f(client, message):
 
 
 async def help_message_f(client, message):
-    await message.reply_text("Welcome...!", quote=True)
+    await message.reply_text("Welcome...! Read /help", quote=True)
     channel_id = str(AUTH_CHANNEL)[4:]
     message_id = 99
     display the /help
