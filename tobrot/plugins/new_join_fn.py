@@ -34,16 +34,16 @@ async def new_join_f(client, message):
 
 
 async def help_message_f(client, message):
-    # await message.reply_text("no one gonna help you 🤣🤣🤣🤣", quote=True)
-    #channel_id = str(AUTH_CHANNEL)[4:]
-    #message_id = 99
-    # display the /help
+    await message.reply_text("Welcome...!", quote=True)
+    channel_id = str(AUTH_CHANNEL)[4:]
+    message_id = 99
+    display the /help
     
-    await message.reply_text("""Hello This is a bot which can mirror all your links to Google drive!
+    await message.reply_text("""mirror all your links to Google drive!
 Type /help to get a list of available commands
 """)
 
 
 
 async def rename_message_f(client, message):
-    await message.reply_text(f"""Index Link: <a href="{INDEX_LINK}/">Click here</a>""")
+    await message.reply_text(f"""GDrive Index Link: <a href="{INDEX_LINK}/"> 📂 Click here</a>""")
