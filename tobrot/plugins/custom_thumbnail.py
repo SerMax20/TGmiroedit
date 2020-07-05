@@ -1,4 +1,4 @@
-"""ThumbNail utilities, © @AnyDLBot"""
+"""ThumbNail utilities"""
 
 
 import os
@@ -35,7 +35,7 @@ async def save_thumb_nail(client, message):
         if metadata.has("height"):
             height = metadata.get("height")
         # resize image
-        # ref: https://t.me/PyrogramChat/44663
+        # ref: 
         img = Image.open(downloaded_file_name)
         # https://stackoverflow.com/a/37631799/4723940
         # img.thumbnail((320, 320))
