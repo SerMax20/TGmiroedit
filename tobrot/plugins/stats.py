@@ -38,7 +38,7 @@ async def ping_bot_g(client, message):
 
 async def check_size_g(client, message):
     #await asyncio.sleep(5)
-    del_it = await message.reply_text("Checking size...")
+    del_it = await message.reply_text("Checking ⏳ size...")
     subprocess.Popen(('touch', 'rclone.conf'), stdout = subprocess.PIPE)
     with open('rclone.conf', 'a', newline="\n") as fole:
         fole.write("[DRIVE]\n")
