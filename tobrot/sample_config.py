@@ -34,5 +34,5 @@ class Config(object):
     TG_OFFENSIVE_API = os.environ.get("TG_OFFENSIVE_API", None)
     CUSTOM_FILE_NAME = os.environ.get("CUSTOM_FILE_NAME", "")
     RCLONE_CONFIG = os.environ.get("RCLONE_CONFIG", "")
-    DESTINATION_FOLDER = os.environ.get("DESTINATION_FOLDER", "TorrentLeech-Gdrive")
+    DESTINATION_FOLDER = os.environ.get("DESTINATION_FOLDER", "Download")
     INDEX_LINK = os.environ.get("INDEX_LINK", "")
