@@ -359,7 +359,7 @@ async def call_apropriate_function_t(
         message_id = final_response[key_f_res_se]
         channel_id = str(AUTH_CHANNEL)[4:]
         private_link = f"https://t.me/c/{channel_id}/{message_id}"
-        message_to_send += "👉 <a href='"
+        message_to_send += "💥 <a href='"
         message_to_send += private_link
         message_to_send += "'>"
         message_to_send += local_file_name
@@ -395,12 +395,12 @@ async def check_progress_for_dl(aria2, gid, event, previous_message):
                 downloading_dir_name = "N/A"
                 try:
                     # another derp -_-
-                    # https://t.me/c/1220993104/423318
+                   
                     downloading_dir_name = str(file.name)
                 except:
                     pass
                 #
-                msg = f"\n`{downloading_dir_name}` - Downloading"
+                msg = f"\n`{downloading_dir_name}` - 📥 Downloading"
                 msg += f"\nSize: {file.total_length_string()}"
                 msg += f"\nProgress: {file.progress_string()} at {file.download_speed_string()}"
 
@@ -424,16 +424,16 @@ async def check_progress_for_dl(aria2, gid, event, previous_message):
             await check_progress_for_dl(aria2, gid, event, previous_message)
         else:
             await asyncio.sleep(5)
-            await event.edit(f"File Downloaded Successfully: `{file.name}`")
+            await event.edit(f"📁 File Downloaded Successfully: `{file.name}`")
             return True
     except Exception as e:
         LOGGER.info(str(e))
         if " not found" in str(e) or "'file'" in str(e):
-            await event.edit("Download Canceled :\n`{}`".format(file.name))
+            await event.edit("📥 Download Canceled :\n`{}`".format(file.name))
             return False
         elif " depth exceeded" in str(e):
             file.remove(force=True)
-            await event.edit("Download Auto Canceled :\n`{}`\nYour Torrent/Link is Dead.".format(file.name))
+            await event.edit("📥 Download Auto Canceled :\n`{}`\nYour Torrent/Link is Dead.".format(file.name))
             return False
         else:
             LOGGER.info(str(e))
@@ -446,7 +446,7 @@ async def check_metadata(aria2, gid):
     file = aria2.get_download(gid)
     LOGGER.info(file)
     if not file.followed_by_ids:
-        # https://t.me/c/1213160642/496
+        
         return None
     new_gid = file.followed_by_ids[0]
     LOGGER.info("Changing GID " + gid + " to " + new_gid)
