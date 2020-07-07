@@ -1,5 +1,5 @@
-# for support join here [TorrentLeech-Gdrive](https://telegram.dog/torrentleechgdrivesupport)
-# working example group [Leech Here](https://telegram.dog/torrentleechgdrive)
+# for support join here [TorrentLeech-Gdrive](https://telegram.dog/)
+# working example group [Leech Here](https://telegram.dog/)
 
 # Original Repo
 https://github.com/gautamajay52/TorrentLeech-Gdrive
@@ -100,7 +100,6 @@ and everythin except `[NAME]`
 8. Examples:-
 <p align="center">
 
-  <img src="https://raw.githubusercontent.com/gautamajay52/TorrentLeech-Gdrive/master/rclone.jpg" width="470" height="150">
 
 </p>
 
@@ -165,7 +164,7 @@ the file will be uploaded as `new.txt`.
 
 * send any one of the available command, as a reply to a valid link.
 
-* if file is larger than 1500MB, [read this](https://t.me/c/1434259219/113).
+* if file is larger than 2000MB, [read this](https://t.me/c/1434259219/113).
 
 * if file is a TAR archive, [read this](https://t.me/c/1434259219/104) to know how to uncompress.
 
